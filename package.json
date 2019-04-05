@@ -1,6 +1,6 @@
 {
   "name": "@cajacko/env-sync",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "description": "Sync env files in a monorepo",
   "main": "index.js",
   "repository": "https://github.com/cajacko/env-sync.git",
@@ -14,9 +14,10 @@
     "start": "yarn build -w",
     "build": "tsc",
     "env-sync": "node dist/src/index.js",
-    "postinstall": "npm build",
+    "prepublish": "npm build",
     "deploy": "npm publish --access public"
   },
+  "files": ["dist"],
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
