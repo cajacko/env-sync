@@ -1,0 +1,42 @@
+{
+  "name": "env-sync",
+  "version": "0.1.0",
+  "description": "Sync env files in a monorepo",
+  "main": "index.js",
+  "repository": "https://github.com/cajacko/env-sync.git",
+  "author": "Charlie Jackson <contact@charliejackson.com>",
+  "license": "MIT",
+  "private": false,
+  "bin": {
+    "env-sync": "dist/src/index.js"
+  },
+  "scripts": {
+    "start": "yarn build -w",
+    "build": "tsc",
+    "env-sync": "node dist/src/index.js",
+    "postinstall": "npm build"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-cajacko": "^1.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript-eslint-parser": "^22.0.0"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^5.0.5",
+    "@types/glob": "^7.1.1",
+    "@types/watch": "^1.0.1",
+    "chokidar": "^2.1.5",
+    "fs-extra": "^7.0.1",
+    "glob": "^7.1.3",
+    "typescript": "^3.4.1",
+    "watch": "^1.0.2"
+  }
+}
