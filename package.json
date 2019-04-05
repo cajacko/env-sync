@@ -1,5 +1,5 @@
 {
-  "name": "env-sync",
+  "name": "@cajacko/env-sync",
   "version": "0.1.0",
   "description": "Sync env files in a monorepo",
   "main": "index.js",
@@ -14,7 +14,8 @@
     "start": "yarn build -w",
     "build": "tsc",
     "env-sync": "node dist/src/index.js",
-    "postinstall": "npm build"
+    "postinstall": "npm build",
+    "deploy": "npm publish --access public"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
